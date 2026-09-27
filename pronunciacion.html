@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Practicar pronunciación · Che Ñe'ẽ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>" />
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/pronunciacion.css">
+</head>
+<body data-page="practicar">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div id="topnav-root"></div>
+
+<div class="app-shell">
+  <main id="main" class="container">
+    <div class="page-head">
+      <h1>Practicar pronunciación</h1>
+      <p>Escuchá, repetí en voz alta y evaluá cómo te salió.</p>
+    </div>
+
+    <div class="pron-stage">
+      <span class="badge badge-neutral" id="pron-counter"></span>
+
+      <div class="card card-pad-lg pron-card">
+        <span class="badge badge-secondary pron-register" id="pron-register"></span>
+        <div class="pron-gn" id="pron-gn"></div>
+        <div class="pron-es" id="pron-es"></div>
+        <button class="audio-btn" id="pron-listen" style="margin:0 auto"><span>Escuchar</span></button>
+      </div>
+
+      <div>
+        <p style="font-weight:700;margin-bottom:.75rem">Repetí la frase</p>
+        <button class="mic-btn" id="pron-mic" aria-label="Tocá para grabarte hablando"></button>
+        <p class="mic-hint">🎙️ Tocá el micrófono y repetí la frase en voz alta</p>
+      </div>
+
+      <div class="pron-result" id="pron-result"></div>
+
+      <div class="pron-nav-row">
+        <button class="btn btn-ghost" id="pron-prev">Anterior</button>
+        <button class="btn btn-primary" id="pron-next">Siguiente frase</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="bottomnav-root"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/pronunciacion.js"></script>
+</body>
+</html>

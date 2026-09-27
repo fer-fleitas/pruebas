@@ -1,0 +1,34 @@
+/* =========================================================
+   LESSON — motor de lección interactiva
+   ========================================================= */
+
+.lesson-shell{ min-height: 100dvh; display: flex; flex-direction: column; }
+.lesson-topbar{ display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-4) var(--sp-5); }
+.lesson-progress-track{ flex: 1; height: 10px; background: var(--bg-alt); border-radius: var(--r-full); overflow: hidden; }
+.lesson-progress-fill{ height: 100%; background: linear-gradient(90deg, var(--secondary), var(--primary)); border-radius: var(--r-full); transition: width var(--dur-med) var(--ease); }
+.lesson-lives{ display: flex; align-items: center; gap: 4px; font-weight: 800; color: var(--accent); font-size: .9rem; }
+.lesson-lives svg{ width: 18px; height: 18px; }
+.feedback-title svg{ width: 24px; height: 24px; }
+.big-check svg{ width: 40px; height: 40px; }
+
+.lesson-main{ flex: 1; display: flex; align-items: center; justify-content: center; padding: var(--sp-5); padding-bottom: var(--sp-8); }
+.lesson-card{ width: 100%; max-width: 480px; }
+.lesson-eyebrow{ display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-4); }
+.lesson-prompt{ font-size: clamp(1.2rem, 4vw, 1.5rem); margin-bottom: var(--sp-5); text-align: center; }
+.lesson-word-display{ text-align: center; margin-bottom: var(--sp-5); }
+.lesson-word-display .big-gn{ font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--primary-dark); }
+.lesson-audio-row{ display: flex; justify-content: center; margin-bottom: var(--sp-5); }
+
+.order-tokens-target{ display: flex; flex-wrap: wrap; gap: var(--sp-2); min-height: 52px; border: 2px dashed var(--border-strong); border-radius: var(--r-md); padding: var(--sp-3); margin-bottom: var(--sp-5); align-items: center; }
+.order-tokens-bank{ display: flex; flex-wrap: wrap; gap: var(--sp-2); justify-content: center; }
+.token-chip{ padding: .6em 1em; border-radius: var(--r-md); background: var(--surface); border: 1.5px solid var(--border-strong); font-weight: 700; cursor: pointer; font-family: var(--font-display); }
+.token-chip:hover{ border-color: var(--primary); }
+.token-chip.placed{ opacity: .35; pointer-events: none; }
+
+.lesson-complete{ text-align: center; }
+.lesson-complete .big-check{ width: 84px; height: 84px; border-radius: 50%; background: var(--success-soft); color: var(--success); display: grid; place-items: center; margin: 0 auto var(--sp-5); }
+.lesson-complete .big-check svg{ width: 40px; height: 40px; }
+.lesson-complete-stats{ display: flex; justify-content: center; gap: var(--sp-6); margin-block: var(--sp-5); }
+.lesson-complete-stat{ text-align: center; }
+.lesson-complete-stat .v{ font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; }
+.lesson-complete-stat .l{ font-size: .78rem; color: var(--ink-soft); }

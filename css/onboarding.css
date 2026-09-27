@@ -1,0 +1,24 @@
+/* =========================================================
+   ONBOARDING — wizard de 3 pasos
+   ========================================================= */
+
+.ob-shell{ min-height: 100dvh; display: flex; flex-direction: column; }
+.ob-header{ padding: var(--sp-5); display: flex; align-items: center; gap: var(--sp-4); }
+.ob-back{ }
+.ob-progress{ flex: 1; }
+.ob-progress-track{ height: 8px; background: var(--bg-alt); border-radius: var(--r-full); overflow: hidden; }
+.ob-progress-fill{ height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: var(--r-full); transition: width var(--dur-med) var(--ease); }
+
+.ob-main{ flex: 1; display: flex; align-items: center; justify-content: center; padding: var(--sp-5); }
+.ob-step{ width: 100%; max-width: 460px; }
+.ob-step-eyebrow{ text-align: center; }
+.ob-step h1{ text-align: center; font-size: clamp(1.4rem, 4vw, 1.9rem); margin-top: var(--sp-3); margin-bottom: var(--sp-6); }
+.ob-choices{ display: flex; flex-direction: column; gap: var(--sp-3); }
+.ob-footer{ padding: var(--sp-5); display: flex; justify-content: center; }
+.ob-footer .btn{ min-width: 220px; }
+
+.ob-name-input{ margin-bottom: var(--sp-6); }
+
+.ob-summary-card{ text-align: center; }
+.ob-summary-icon{ width: 72px; height: 72px; border-radius: var(--r-full); background: var(--primary-soft); color: var(--primary-dark); display: grid; place-items: center; margin: 0 auto var(--sp-4); }
+.ob-summary-icon svg{ width: 34px; height: 34px; }

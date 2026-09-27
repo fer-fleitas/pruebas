@@ -1,0 +1,107 @@
+/* =========================================================
+   APP.CSS — utilidades y layouts compartidos por las páginas
+   internas (dashboard, cursos, cultura, perfil, progreso,
+   diccionario, vocabulario). Cada página puede sumar su propio
+   archivo si necesita algo muy específico (lección, pronun-
+   ciación, conversar).
+   ========================================================= */
+
+.stat-row{ display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-3); }
+@media (max-width: 720px){ .stat-row{ grid-template-columns: repeat(2, 1fr); } }
+.stat-card{ display: flex; flex-direction: column; gap: var(--sp-2); align-items: flex-start; }
+.stat-card .stat-icon{ width: 36px; height: 36px; border-radius: var(--r-md); display: grid; place-items: center; }
+.stat-card .stat-icon svg{ width: 18px; height: 18px; }
+.stat-value{ font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; }
+.stat-label{ font-size: .78rem; color: var(--ink-soft); font-weight: 600; }
+
+.greet-card{ background: linear-gradient(135deg, var(--primary-soft), var(--surface) 65%); border: none; }
+.greet-head{ display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+.greet-title{ font-size: clamp(1.3rem, 3.5vw, 1.7rem); }
+.greet-sub{ color: var(--ink-soft); margin-top: var(--sp-2); }
+.greet-ring{ flex-shrink: 0; }
+
+.grid-2{ display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); }
+@media (max-width: 860px){ .grid-2{ grid-template-columns: 1fr; } }
+
+.next-lesson-card{ display: flex; align-items: center; gap: var(--sp-4); }
+.next-lesson-icon{ width: 56px; height: 56px; border-radius: var(--r-lg); background: var(--primary-soft); color: var(--primary-dark); display: grid; place-items: center; flex-shrink: 0; }
+.next-lesson-icon svg{ width: 28px; height: 28px; }
+.next-lesson-meta{ flex: 1; min-width: 0; }
+.next-lesson-meta h3{ font-size: 1.05rem; }
+.next-lesson-meta p{ font-size: .85rem; color: var(--ink-soft); margin-top: 2px; }
+
+.phrase-card{ background: linear-gradient(135deg, var(--secondary-soft), var(--surface) 70%); border: none; }
+.phrase-gn{ font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--secondary-dark); margin-block: var(--sp-2); }
+.phrase-es{ color: var(--ink-soft); margin-bottom: var(--sp-4); }
+.phrase-actions{ display: flex; gap: var(--sp-2); flex-wrap: wrap; }
+
+.quick-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-3); }
+@media (max-width: 860px){ .quick-grid{ grid-template-columns: repeat(2, 1fr); } }
+.quick-tile{ display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-3); text-align: left; }
+.quick-tile .feature-icon{ width: 42px; height: 42px; }
+
+.goal-bar-row{ display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--sp-2); font-size: .85rem; font-weight: 700; }
+
+/* ---- listas de cursos / niveles ---- */
+.course-level{ margin-bottom: var(--sp-6); }
+.course-level-head{ display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-4); }
+.course-level-icon{ width: 44px; height: 44px; border-radius: var(--r-md); display: grid; place-items: center; flex-shrink: 0; }
+.course-level-icon svg{ width: 22px; height: 22px; }
+.lesson-list{ display: flex; flex-direction: column; gap: var(--sp-3); }
+.lesson-row{ display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-4); }
+.lesson-row-bullet{ width: 40px; height: 40px; border-radius: var(--r-full); display: grid; place-items: center; flex-shrink: 0; background: var(--bg-alt); color: var(--ink-faint); }
+.lesson-row.done .lesson-row-bullet{ background: var(--success-soft); color: var(--success); }
+.lesson-row.current .lesson-row-bullet{ background: var(--primary-soft); color: var(--primary-dark); }
+.lesson-row-meta{ flex: 1; }
+.lesson-row-meta h4{ font-size: .98rem; }
+.lesson-row-meta p{ font-size: .8rem; color: var(--ink-faint); }
+.lesson-row.locked{ opacity: .55; }
+
+/* ---- cultura ---- */
+.culture-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4); }
+@media (max-width: 900px){ .culture-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){ .culture-grid{ grid-template-columns: 1fr; } }
+.culture-card{ display: flex; flex-direction: column; gap: var(--sp-3); }
+.culture-card p{ font-size: .9rem; color: var(--ink-soft); }
+
+/* ---- diccionario ---- */
+.dict-result{ display: flex; align-items: flex-start; gap: var(--sp-4); }
+.dict-word{ font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--primary-dark); }
+.dict-tags{ display: flex; gap: var(--sp-2); margin-block: var(--sp-2); flex-wrap: wrap; }
+.dict-example{ background: var(--bg-alt); border-radius: var(--r-md); padding: var(--sp-4); margin-top: var(--sp-3); }
+.dict-related{ display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-4); }
+.dict-chip{ padding: .4em .9em; border-radius: var(--r-full); background: var(--bg-alt); font-weight: 700; font-size: .82rem; cursor: pointer; border: 1px solid var(--border); }
+.dict-chip:hover{ background: var(--primary-soft); }
+
+/* ---- vocabulario / flashcards ---- */
+.flash-stage{ display: flex; flex-direction: column; align-items: center; gap: var(--sp-5); padding-block: var(--sp-6); }
+.flash-counter{ font-weight: 700; color: var(--ink-faint); font-size: .85rem; }
+.flashcard{ width: 100%; max-width: 340px; aspect-ratio: 3/4; perspective: 1200px; }
+.flashcard-inner{ position: relative; width: 100%; height: 100%; transition: transform .5s var(--ease); transform-style: preserve-3d; }
+.flashcard.flipped .flashcard-inner{ transform: rotateY(180deg); }
+.flashcard-face{ position: absolute; inset: 0; backface-visibility: hidden; border-radius: var(--r-xl); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--sp-3); padding: var(--sp-6); box-shadow: var(--shadow-lg); text-align: center; }
+.flashcard-front{ background: linear-gradient(160deg, var(--primary-soft), var(--surface)); }
+.flashcard-back{ background: linear-gradient(160deg, var(--secondary-soft), var(--surface)); transform: rotateY(180deg); }
+.flashcard-word{ font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; }
+.flash-btn-row{ display: flex; gap: var(--sp-3); width: 100%; max-width: 340px; }
+.flash-btn-row .btn{ flex: 1; }
+
+/* ---- perfil / progreso ---- */
+.profile-head{ display: flex; align-items: center; gap: var(--sp-5); flex-wrap: wrap; }
+.profile-avatar{ width: 76px; height: 76px; border-radius: var(--r-full); background: linear-gradient(135deg, var(--secondary), var(--secondary-dark)); color: var(--secondary-ink); display: grid; place-items: center; font-size: 1.8rem; font-weight: 800; flex-shrink: 0; }
+.settings-row{ display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); padding-block: var(--sp-4); border-bottom: 1px solid var(--border); }
+.settings-row:last-child{ border-bottom: none; }
+.settings-row-label{ font-weight: 700; }
+.settings-row-desc{ font-size: .82rem; color: var(--ink-soft); }
+
+.achv-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); }
+@media (max-width: 720px){ .achv-grid{ grid-template-columns: repeat(2, 1fr); } }
+.achv-card{ text-align: center; padding: var(--sp-4); }
+.achv-icon{ width: 48px; height: 48px; border-radius: var(--r-full); margin: 0 auto var(--sp-3); display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-dark); }
+.achv-card.locked{ opacity: .45; }
+.achv-card h4{ font-size: .85rem; }
+.achv-card p{ font-size: .74rem; color: var(--ink-faint); margin-top: 2px; }
+
+.weekday-row{ display: flex; gap: var(--sp-2); justify-content: space-between; }
+.weekday-pill{ flex: 1; text-align: center; padding: var(--sp-3) 0; border-radius: var(--r-md); background: var(--bg-alt); font-size: .74rem; font-weight: 700; color: var(--ink-faint); }
+.weekday-pill.active{ background: var(--primary); color: var(--primary-ink); }

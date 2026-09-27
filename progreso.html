@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Tu progreso · Che Ñe'ẽ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>" />
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="perfil">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div id="topnav-root"></div>
+
+<div class="app-shell">
+  <main id="main" class="container">
+    <div class="page-head">
+      <a href="perfil.html" class="btn btn-ghost btn-sm" style="margin-bottom:1rem">← Perfil</a>
+      <h1>Tu progreso</h1>
+      <p>Así viene tu camino en guaraní hasta ahora.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card card-pad-lg" style="text-align:center">
+        <div class="ring" id="prog-ring" style="--pct:0;width:110px;height:110px;margin:0 auto 1rem"><span id="prog-ring-label" style="font-size:1.3rem"></span></div>
+        <p class="text-soft" id="prog-xp-label"></p>
+      </div>
+      <div class="card card-pad-lg">
+        <div class="goal-bar-row"><span>Lecciones completadas</span><span id="prog-lessons-text"></span></div>
+        <div class="progress progress-lg"><div class="progress-fill" id="prog-lessons-fill" style="width:0%"></div></div>
+        <div id="prog-level-breakdown" style="margin-top:1rem"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Actividad semanal</h2>
+      <div class="card">
+        <div class="weekday-row" id="prog-week-row"></div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <h2 class="section-title">Vocabulario</h2>
+      <div class="stat-row">
+        <div class="card stat-card"><div class="stat-icon fi-success" data-icon="check"></div><span class="stat-value" id="prog-known">0</span><span class="stat-label">Ya las sabés</span></div>
+        <div class="card stat-card"><div class="stat-icon fi-accent" data-icon="target"></div><span class="stat-value" id="prog-practice">0</span><span class="stat-label">A practicar</span></div>
+        <div class="card stat-card"><div class="stat-icon fi-secondary" data-icon="chat"></div><span class="stat-value" id="prog-scenarios">0</span><span class="stat-label">Conversaciones</span></div>
+        <div class="card stat-card"><div class="stat-icon fi-primary" data-icon="trophy"></div><span class="stat-value" id="prog-achv">0</span><span class="stat-label">Logros</span></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="bottomnav-root"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/content-helpers.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/progreso.js"></script>
+</body>
+</html>

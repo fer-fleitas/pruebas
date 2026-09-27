@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Perfil · Che Ñe'ẽ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>" />
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="perfil">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div id="topnav-root"></div>
+
+<div class="app-shell">
+  <main id="main" class="container">
+
+    <div class="section" style="padding-top: var(--sp-5)">
+      <div class="card card-pad-lg profile-head">
+        <div class="profile-avatar" id="profile-avatar">A</div>
+        <div style="flex:1">
+          <h1 id="profile-name" style="font-size:1.4rem">Alfon</h1>
+          <p class="text-soft" id="profile-level-label">Nivel A1 · Principiante</p>
+        </div>
+        <a href="progreso.html" class="btn btn-soft">Ver progreso</a>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <div class="stat-row">
+        <div class="card stat-card"><div class="stat-icon fi-accent" data-icon="flame"></div><span class="stat-value" id="p-streak">0</span><span class="stat-label">Racha</span></div>
+        <div class="card stat-card"><div class="stat-icon fi-primary" data-icon="star"></div><span class="stat-value" id="p-words">0</span><span class="stat-label">Palabras</span></div>
+        <div class="card stat-card"><div class="stat-icon fi-secondary" data-icon="chat"></div><span class="stat-value" id="p-phrases">0</span><span class="stat-label">Frases practicadas</span></div>
+        <div class="card stat-card"><div class="stat-icon fi-success" data-icon="target"></div><span class="stat-value" id="p-time">0 min</span><span class="stat-label">Tiempo estudiado</span></div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <h2 class="section-title">Logros</h2>
+      <div class="achv-grid" id="achv-grid"></div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <h2 class="section-title">Objetivo diario</h2>
+      <div class="card">
+        <div class="field">
+          <label for="p-goal-select">Minutos por día</label>
+          <select class="select" id="p-goal-select">
+            <option value="5">5 minutos</option>
+            <option value="10">10 minutos</option>
+            <option value="15">15 minutos</option>
+            <option value="30">30 minutos</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <h2 class="section-title">Configuración</h2>
+      <div class="card">
+        <div class="settings-row">
+          <div><div class="settings-row-label">Modo oscuro</div><div class="settings-row-desc">Elegí claro, oscuro o el de tu sistema</div></div>
+          <select class="select" id="p-theme-select" style="width:auto;height:40px">
+            <option value="system">Sistema</option>
+            <option value="light">Claro</option>
+            <option value="dark">Oscuro</option>
+          </select>
+        </div>
+        <div class="settings-row">
+          <div><div class="settings-row-label">Sonido</div><div class="settings-row-desc">Efectos al responder y música de fondo</div></div>
+          <label class="switch"><input type="checkbox" id="p-sound-toggle"><span class="switch-track"></span></label>
+        </div>
+        <div class="settings-row">
+          <div><div class="settings-row-label">Notificaciones</div><div class="settings-row-desc">Recordatorio de tu objetivo diario</div></div>
+          <label class="switch"><input type="checkbox" id="p-notif-toggle"><span class="switch-track"></span></label>
+        </div>
+        <div class="settings-row">
+          <div><div class="settings-row-label">Idioma de la interfaz</div><div class="settings-row-desc">Por ahora, solo en español</div></div>
+          <select class="select" style="width:auto;height:40px" disabled><option>Español</option></select>
+        </div>
+        <div class="settings-row">
+          <div><div class="settings-row-label">Accesibilidad</div><div class="settings-row-desc">Contraste alto, tipografía legible y navegación por teclado ya activas</div></div>
+          <span class="icon-btn" data-icon="accessibility" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top:0">
+      <button class="btn btn-ghost" id="p-reset" style="color:var(--danger);border-color:var(--danger-soft)">Reiniciar todo mi progreso</button>
+    </div>
+
+  </main>
+</div>
+
+<div id="bottomnav-root"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/chrome.js"></script>
+<script src="js/perfil.js"></script>
+</body>
+</html>

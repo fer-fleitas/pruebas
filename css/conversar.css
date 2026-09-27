@@ -1,0 +1,24 @@
+/* =========================================================
+   CONVERSAR — Ñañe'ẽ
+   ========================================================= */
+
+.scenario-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-4); }
+@media (max-width: 900px){ .scenario-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){ .scenario-grid{ grid-template-columns: 1fr; } }
+.scenario-card{ text-align: left; display: flex; flex-direction: column; gap: var(--sp-3); cursor: pointer; }
+.scenario-card .feature-icon{ width: 44px; height: 44px; }
+.scenario-card h3{ font-size: 1.02rem; }
+.scenario-card p{ font-size: .84rem; color: var(--ink-soft); }
+.scenario-card.done{ border-color: var(--success); }
+
+.convo-shell{ max-width: 560px; margin: 0 auto; }
+.convo-setting{ background: var(--bg-alt); border-radius: var(--r-md); padding: var(--sp-4); font-size: .9rem; color: var(--ink-soft); margin-bottom: var(--sp-5); text-align: center; }
+.convo-log{ display: flex; flex-direction: column; gap: var(--sp-3); margin-bottom: var(--sp-5); }
+.convo-bubble{ max-width: 82%; padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md); }
+.convo-bubble.npc{ align-self: flex-start; background: var(--bg-alt); border-bottom-left-radius: 4px; }
+.convo-bubble.user{ align-self: flex-end; background: var(--primary-soft); color: var(--primary-dark); border-bottom-right-radius: 4px; }
+.convo-bubble-gn{ font-family: var(--font-display); font-weight: 700; }
+.convo-bubble-es{ font-size: .8rem; color: var(--ink-faint); margin-top: 2px; }
+.convo-bubble.user .convo-bubble-es{ color: var(--primary-dark); opacity: .7; }
+
+.convo-complete{ text-align: center; }

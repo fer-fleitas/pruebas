@@ -1,0 +1,167 @@
+/* =========================================================
+   DESIGN TOKENS — Ñe'ẽ (nombre de trabajo del design system)
+   Paleta inspirada en: tereré helado, lapacho en flor, yerba,
+   hilo de ñandutí. Deliberadamente lejos de rojo/blanco/azul
+   de bandera — la identidad paraguaya se apoya en naturaleza
+   y artesanía, no en colores patrios.
+   ========================================================= */
+
+:root{
+  color-scheme: light;
+
+  /* ---- superficie / texto (claro) ---- */
+  --bg: #FBF6EC;
+  --bg-alt: #F3EAD6;
+  --surface: #FFFFFF;
+  --surface-alt: #FFFBF3;
+  --ink: #241F1A;
+  --ink-soft: #6B6255;
+  --ink-faint: #94897A;
+  --border: #E9DCC3;
+  --border-strong: #DCC9A3;
+
+  /* ---- marca ---- */
+  --primary: #D9713D;      /* terracota / lapacho */
+  --primary-dark: #B8582B;
+  --primary-ink: #FFF7EF;  /* texto sobre primary */
+  --primary-soft: #FBE3D1;
+
+  --secondary: #2E6E5B;    /* verde yerba / mate */
+  --secondary-dark: #1F4F41;
+  --secondary-ink: #F1FBF6;
+  --secondary-soft: #DCEEE6;
+
+  --accent: #E7A421;       /* dorado lapacho amarillo */
+  --accent-dark: #B87F13;
+  --accent-ink: #2A1E05;
+  --accent-soft: #FBEACB;
+
+  --success: #3E9142;
+  --success-soft: #E1F0DF;
+  --danger: #D6493C;
+  --danger-soft: #FBE2DE;
+  --info: #3A7CA5;
+  --info-soft: #E1EEF5;
+
+  /* ---- sombras (tinte cálido, no negro puro) ---- */
+  --shadow-sm: 0 1px 2px rgba(58, 40, 20, .06), 0 1px 1px rgba(58,40,20,.04);
+  --shadow-md: 0 6px 16px -4px rgba(58, 40, 20, .14), 0 2px 6px rgba(58,40,20,.06);
+  --shadow-lg: 0 20px 44px -12px rgba(40, 28, 14, .22), 0 6px 16px -6px rgba(40,28,14,.10);
+  --shadow-glow-primary: 0 8px 24px -6px rgba(217, 113, 61, .38);
+  --shadow-glow-secondary: 0 8px 24px -6px rgba(46, 110, 91, .35);
+
+  /* ---- radios ---- */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-full: 999px;
+
+  /* ---- espaciado ---- */
+  --sp-1: .25rem;
+  --sp-2: .5rem;
+  --sp-3: .75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+
+  /* ---- tipografía ---- */
+  --font-display: 'Sora', 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ---- capas / transiciones ---- */
+  --ease: cubic-bezier(.22,1,.36,1);
+  --dur-fast: .16s;
+  --dur-med: .28s;
+  --dur-slow: .48s;
+
+  --header-h: 68px;
+  --bottomnav-h: 64px;
+  --max-w: 1180px;
+}
+
+/* ---- oscuro: automático por preferencia de sistema ---- */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg: #16130E;
+    --bg-alt: #1D1810;
+    --surface: #221C14;
+    --surface-alt: #2A2216;
+    --ink: #F5EFE1;
+    --ink-soft: #C7BCA4;
+    --ink-faint: #948A76;
+    --border: #382E20;
+    --border-strong: #4A3D28;
+
+    --primary: #F0895A;
+    --primary-dark: #D96C3F;
+    --primary-ink: #241205;
+    --primary-soft: #3B2718;
+
+    --secondary: #55B594;
+    --secondary-dark: #3D9377;
+    --secondary-ink: #06170F;
+    --secondary-soft: #1D362C;
+
+    --accent: #F2C34E;
+    --accent-dark: #D9A62B;
+    --accent-ink: #241A03;
+    --accent-soft: #3A2E12;
+
+    --success: #5FBB61;
+    --success-soft: #1C3320;
+    --danger: #E8695C;
+    --danger-soft: #3A211D;
+    --info: #62A9CE;
+    --info-soft: #1C2E3A;
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.32);
+    --shadow-md: 0 8px 20px -6px rgba(0,0,0,.5);
+    --shadow-lg: 0 24px 48px -14px rgba(0,0,0,.6);
+  }
+}
+
+/* ---- oscuro: forzado manualmente (botón de tema) ---- */
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg: #16130E;
+  --bg-alt: #1D1810;
+  --surface: #221C14;
+  --surface-alt: #2A2216;
+  --ink: #F5EFE1;
+  --ink-soft: #C7BCA4;
+  --ink-faint: #948A76;
+  --border: #382E20;
+  --border-strong: #4A3D28;
+
+  --primary: #F0895A;
+  --primary-dark: #D96C3F;
+  --primary-ink: #241205;
+  --primary-soft: #3B2718;
+
+  --secondary: #55B594;
+  --secondary-dark: #3D9377;
+  --secondary-ink: #06170F;
+  --secondary-soft: #1D362C;
+
+  --accent: #F2C34E;
+  --accent-dark: #D9A62B;
+  --accent-ink: #241A03;
+  --accent-soft: #3A2E12;
+
+  --success: #5FBB61;
+  --success-soft: #1C3320;
+  --danger: #E8695C;
+  --danger-soft: #3A211D;
+  --info: #62A9CE;
+  --info-soft: #1C2E3A;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.32);
+  --shadow-md: 0 8px 20px -6px rgba(0,0,0,.5);
+  --shadow-lg: 0 24px 48px -14px rgba(0,0,0,.6);
+}
+
+:root[data-theme="light"]{ color-scheme: light; }
